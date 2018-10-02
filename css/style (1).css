@@ -1,0 +1,661 @@
+/* Police
+================================================== */
+
+@font-face {
+    font-family: "Roboto";
+    src: url('fonts/Roboto-regular.ttf') format("truetype");
+    font-family: "Roboto-black";
+    src: url('fonts/Roboto-Black.ttf') format("truetype");
+    
+}
+
+
+/* Body
+================================================== */
+
+
+body {
+    font-family: "Roboto", sans-serif;
+    color: dimgrey;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+
+}
+
+h1  {
+    font-family: "Roboto-black", sans-serif;
+    color: black;
+    font-size: 2em;
+}
+
+h2, h3 {
+    color: black;
+}
+
+/* Navbar
+================================================== */
+
+#navbar {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 15px;
+}
+
+/*#navbar > img {
+    margin-left: 150px;
+}*/
+
+#navbar {
+    margin: 10px;
+}
+
+
+#navbar ul {
+    
+    list-style-type: none;
+    padding: 0;
+        
+}
+
+#navbar li {
+    display: inline;
+    
+}
+
+#navbar li a {
+    
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    padding: 15px 0.5em;
+}
+
+#navbar li a:hover {
+    border-top: 2px solid #2ca5bc;
+}
+
+#navbar .active {
+    border-top: 2px solid #2ca5bc;
+    
+}
+
+@media screen and (max-width: 640px)
+{
+    
+    #navbar ul { 
+        font-size: 12px;
+        padding: 10px;             }
+}
+
+
+
+/* Carrousel
+================================================== */
+
+/******* Image *******/
+
+.carousel img {
+    width: 100%;
+    animation: fondu-carousel 10s infinite alternate;
+}
+
+.carousel {
+    background-image: url(../images/slider/bg2.jpg); 
+    height: auto;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+@keyframes fondu-carousel {
+    
+    0% {
+        opacity: 1;
+    }
+    
+    33% {
+        opacity: 1;
+    }
+    
+    66% {
+        opacity: 0;
+    }
+    
+    100% {
+        opacity: 0;
+    }    
+}
+ 
+
+/******* barre de chargement *******/
+
+.barre-chargement {
+    height: 5px;
+    background: #D8D8D8;
+    position: relative;
+    top: -5px;
+}
+
+.chargement {
+    width: 50%;
+    background-color: #4494BB;
+    height: 5px;
+    animation: barredechargement 10s linear infinite;
+}
+
+@keyframes barredechargement {
+    
+    0% {
+        width: 0%;
+    }
+    
+    33% {
+        width: 100%;
+    }
+    
+    66% {
+        width: 100%;
+    }
+    
+    100% {
+        width: 100%;
+    }  
+  
+}
+
+/******* Fleches *******/
+
+.fa-angle-left { 
+
+    font-size: 2em;
+    color: white;
+    position: relative;
+    bottom: 18vw;
+    background-color: #06060666;
+    padding: 6px;
+    border-radius: 0 50px 50px 0;
+    right: 5px;
+
+}
+
+.fa-angle-right { 
+
+    font-size: 2em;
+    color: white;
+    position: relative;
+    bottom: 18vw;
+    left: 1845px;
+    background-color: #06060666;
+    padding: 6px;
+    border-radius: 50px 0 0 50px;
+}
+
+/******* Text *******/
+
+
+.texte-slider {    
+    width: 30%;
+    margin-left: 280px;
+    position:absolute;
+    bottom: 450px;
+}
+
+.texte-slider > h1 {
+    text-transform: uppercase;
+    color: aliceblue;
+    
+}
+
+.texte-slider > h1 > strong {
+    color: #4494BB;
+    
+}
+
+.texte-slider > p {
+    color: aliceblue;
+    margin-bottom: 40px;
+}
+
+.bouton-slider {
+    background-color: #4494BB;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 100px;
+    border-bottom: 2px solid #0065bc;
+}
+
+.bouton-slider > a {
+    color: aliceblue;
+    text-decoration: none;
+}
+
+
+
+/******* responsive *******/
+
+@media screen and (max-width: 1024px)
+{
+    .carousel { display: none;}
+}
+
+/* Services
+================================================== */
+
+/*#services {
+    margin-top: -200px;
+}*/
+
+/******* Titre *******/ 
+    
+#services > h1  {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/******* Trait *******/
+
+#trait-point {
+    display: flex;
+    justify-content: center;
+}
+
+#trait {
+    background-color: #dadada;
+    width: 50px;
+    height: 1px;    
+}
+
+#cercle {
+    background-color: #4494BB;
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    margin-top: -8px;
+    
+}
+
+/******* Image *******/
+
+#services > p  {
+    text-align: center;
+}
+
+
+.description {
+    
+    margin-top: 50px;
+}
+
+.featuredescription{
+    display: flex;    
+}
+
+.feature {
+    padding-left: 10%;
+    width: 40%;    
+}
+
+
+/******* Responsive / image *******/
+
+@media screen and (max-width: 1024px)
+{
+    .feature { display: none;}
+    .featuredescription {width: 100%;}
+    
+    
+}
+/******* List *******/
+
+
+
+.boite {
+    display: flex;
+}
+
+/******* Point *******/
+
+.icone > svg::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    background-color: red;
+    position: relative;
+    top: 45px;
+    right: 26px;
+    
+}
+
+.boite-point {
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    background-color: #4494BB;
+    position: relative;
+    top: 45px;
+    right: 26px;
+    
+}
+
+	
+.boite .icone svg  {
+    display: block;
+    color: #4494BB;
+    font-size: 35px;
+    margin: 20px;
+    padding: 10px;
+    border: 2px solid #c6c6c6;
+    border-radius: 100%;
+    
+}
+
+
+
+/* Projets
+================================================== */
+/******* Background *******/
+
+#projet {
+    background-color: #f8f1f1;
+}
+
+/******* Titre *******/
+
+#header-projet > h1  {
+    margin-top: 50px;
+    padding-top: 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#header-projet > hr {
+    width: 100px;
+}
+
+
+#header-projet > p {
+    text-align: center;
+}
+
+/******* Menu *******/
+
+#bouton a { 
+    text-decoration: none;
+}
+
+#bouton { 
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+#bouton > div {
+    padding: 10px;
+            
+}
+
+/*.allwork {
+    height: 25px;
+    
+} */
+
+/******* Menu Survol *******/ 
+
+.creative:hover, .corporate:hover {
+    background-color: #4494BB;
+    border-bottom: 2px solid #0065bc;
+}
+
+.menu-portfolio:hover {
+    background-color: #4494BB;
+    border-radius: 0px 5px 5px 0px;
+    border-bottom: 2px solid #0065bc;
+}
+
+
+.menu-portfolio a:hover, .creative a:hover, .corporate a:hover {
+    color: aliceblue;    
+} 
+
+.creative a::after, .corporate a::after, .menu-portfolio a::after{
+    content: '';
+    position: absolute;
+    margin-top: 35px;
+    margin-left: -41px;
+    width: 0;
+    height: 0;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-top: 12px solid #4494BB;
+    clear: both;
+    opacity: 0;
+}
+
+.creative a:hover::after,.corporate a:hover::after,.menu-portfolio a:hover::after {
+    opacity: 1;
+}
+
+
+/******* Couleur text *******/
+.allwork a {
+    color: aliceblue;
+}
+
+.creative a {
+    color: #64686D;
+}
+
+.corporate a {
+    color: #64686D;
+}
+
+.menu-portfolio a {
+    color: #64686D;
+}
+
+/******* Background Menu *******/
+
+    
+.allwork {
+    background-color: #4494BB; 
+    border-radius: 5px 0 0 5px;
+    height: 25px;
+    border-bottom: 2px solid #0065bc;
+}
+
+.menu-portfolio {
+    border-radius: 0 5px 5px 0;
+}
+
+.creative, .corporate, .menu-portfolio {
+    background-color: #E5E5E5; 
+}
+
+#triangle { 
+    height: 0;
+    width: 0;
+    border-top: 12px solid #4494BB;
+    border-right: 9px solid transparent;
+    border-left: 9px solid transparent;
+    position: relative;
+    top: 12px;
+    left: 20px;
+}
+
+
+
+
+/******* Portfolio *******/
+
+.portfolio{
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+.imagepf  {
+    /*width: 20%;*/
+    width: 400px;
+    padding: 10px;
+}
+
+.imagepf > img {
+    width: 100%;
+}
+
+.survol {
+    height: 25%;
+    width: auto;
+    position: relative;
+    bottom: 135px;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+.survol:hover {
+    opacity: 1;
+}
+
+
+.survol > h2 {
+    padding-left: 10px;
+    padding-top: 5px;
+    color: aliceblue;
+    font-size: 1.5em;
+}
+
+.survol > p {
+    padding-left: 10px;
+    color: aliceblue;
+}
+
+
+/******* Oeil *******/
+
+.survol > svg {
+    color: white;
+    font-size: 30px;
+    position: relative;
+    bottom: 100px;
+    left: 300px;
+    background-color: #4494BB;
+    padding: 8px;
+    border: 2px solid;
+    border-radius: 100%;
+}
+
+/******* Responsive *******/
+
+@media screen and (max-width: 1024px)
+{
+    .portfolio { 
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
+@media screen and (max-width: 640px)
+{
+
+    .imagepf {
+        width: 90vw;
+    }
+    .survol {
+        bottom: 29%;
+    }
+    #bouton {
+        font-size: 14px;
+    }
+}
+
+
+
+/* Footer
+================================================== */
+
+/******* Map *******/
+
+footer {
+    position: relative;
+}
+
+footer > iframe {
+    width: 100%;
+    height: 800px;
+}
+
+#contact {
+    background-color: #efedec;
+    width: 350px;
+    height: 520px;
+    position: absolute;
+    top: 195px;
+    left: 70%;
+    padding: 20px;
+    border: 1px solid #bdb8b8;
+    border-radius: 5px;
+        
+}
+
+
+.formulaire {
+    text-align: center;
+}
+
+#contact > input {
+    width: 100%;
+    height: 30px;
+    margin-bottom: 20px;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+#contact > textarea {
+    width: 100%;
+    height: 120px;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+
+@media screen and (max-width: 1024px)
+{
+    #contact { 
+        position: relative;
+        left: 0px;
+        bottom: 0px;
+        margin: auto;
+        width: 250px;
+    }
+        
+    footer > iframe { display: none;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
